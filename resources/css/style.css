@@ -42,3 +42,7 @@
 .my-float {
   margin-top: 16px;
 }
+
+.bg a:hover {
+  color: #fff;
+}
