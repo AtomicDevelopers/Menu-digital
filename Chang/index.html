@@ -1,42 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="author" content="Atomic Developers" />
-    <meta name="copyright" content="Atomic Developers" />
-    <meta name="description" content="Restaurante Familia Chang" />
-    <title>Restaurante Familia Chang</title>
 
-    <!-- Favicon -->
-    <meta name="keywords" content="Menu, Chang, Managua, Restaurantes" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png"/>
-    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png"/>
-    <link rel="manifest" href="img/favicon/site.webmanifest" />
-    <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
-    <meta name="msapplication-TileColor" content="#ffc40d" />
-    <meta name="theme-color" content="#ffffff" />
-    <!-- Menu Style -->    
-    <link href="../resources/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="../resources/css/style.css" rel="stylesheet" />
-  </head>
-  <body class="bg">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12 p-0">
-          <img
-            src="img/Menu Completo.png"
-            class="img-fluid mx-auto d-block"
-            alt="Menu digital restaurante chang"
-          />
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Atomic Developers" />
+  <meta name="copyright" content="Atomic Developers" />
+  <meta name="description" content="Restaurante Familia Chang" />
+  <title>Restaurante Familia Chang</title>
+
+  <!-- Favicon -->
+  <meta name="keywords" content="Menu, Chang, Managua, Restaurantes" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png" />
+  <link rel="manifest" href="img/favicon/site.webmanifest" />
+  <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#ffc40d" />
+  <meta name="theme-color" content="#ffffff" />
+  <!-- Menu Style -->
+  <link href="../resources/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="../resources/css/style.css" rel="stylesheet" />
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&display=swap">
+</head>
+
+<body class="bg">
+
+  <div id="loading">
+    <div class="row h-100 justify-content-center align-items-center">
+      <div class="col-8 col-sm-8 col-md-10 col-lg-10 col-xl-12">
+        <h1 class="display-4 font-weight-normal text-white">
+          Restaurante de la familia Chang
+        </h1>
+        <img class="img-fluid" src="img/ramen.svg" alt="Loading..." />
       </div>
     </div>
+  </div>
 
-    <a href="https://api.whatsapp.com/send?phone=50578781618&text=Hola,%20quiero%20realizar%20un%20pedido." class="float" target="_blank">
-      <i class="fa fa-whatsapp my-float"></i>
-    </a>
-  </body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-12 p-0">
+        <img src="img/Menu Completo.png" class="img-fluid mx-auto d-block menu" alt="Menu digital restaurante chang" />
+      </div>
+    </div>
+  </div>
+
+  <a href="https://api.whatsapp.com/send?phone=50578781618&text=Hola,%20quiero%20realizar%20un%20pedido." class="float"
+    target="_blank">
+    <i class="fa fa-whatsapp my-float"></i>
+  </a>
+</body>
+<script>
+  window.addEventListener("load", event => {
+    var image = document.querySelector('img.menu');
+    var isLoaded = image.complete && image.naturalHeight !== 0;
+    if (isLoaded) {
+      setTimeout(function () {
+        document.getElementById('loading').style.display = 'none';
+      }, 2500);
+    }
+  });
+</script>
+
 </html>
