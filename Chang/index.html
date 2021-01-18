@@ -57,9 +57,7 @@
     var image = document.querySelector('img.menu');
     var isLoaded = image.complete && image.naturalHeight !== 0;
     if (isLoaded) {
-      setTimeout(function () {
-        document.getElementById('loading').style.display = 'none';
-      }, 1500);
+      document.getElementById('loading').style.display = 'none';
     }
   });
 </script>
