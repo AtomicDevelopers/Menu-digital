@@ -70,7 +70,7 @@ h1 {
   width: 60px;
   height: 60px;
   bottom: 110px;
-  right: 30px;
+  right: 24px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
@@ -89,5 +89,5 @@ h1 {
 }
 
 .chang-red-text {
-  color: #AF1026;
+  color: #af1026;
 }
