@@ -6,9 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Atomic Developers" />
   <meta name="copyright" content="Atomic Developers" />
-  <meta name="keywords" content="restaurante, familia, chang, comida-china"/>
+  <meta name="keywords" content="restaurante, familia, chang, comida-china" />
   <meta name="description" content="Restaurante de comida china de la Familia Chang" />
-  <meta name="robots" content= "index, follow">
+  <meta name="robots" content="index, follow">
   <title>Restaurante Familia Chang</title>
 
   <!-- Favicon -->
@@ -53,6 +53,13 @@
     target="_blank">
     <i class="fa fa-whatsapp my-float"></i>
   </a>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <!-- Your Chat Plugin code -->
+  <div class="fb-customerchat" attribution="setup_tool" page_id="1656333991272801">
+  </div>
+
 </body>
 <script>
   window.addEventListener("load", event => {
@@ -62,16 +69,23 @@
       document.getElementById('loading').style.display = 'none';
     }
   });
+</script>
 
-  window.fbAsyncInit = function() {
+<script>
+  window.fbAsyncInit = function () {
     FB.init({
-      appId            : '1800420356783263',
-      autoLogAppEvents : true,
-      xfbml            : true,
-      version          : 'v10.0'
+      xfbml: true,
+      version: 'v10.0'
     });
   };
-</script>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+  (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  </script>
 
 </html>
