@@ -85,7 +85,7 @@ h1 {
 }
 
 .btn-rounded {
-  display:block;
+  display: block;
   height: 60px;
   width: 60px;
   border-radius: 50%;
@@ -103,7 +103,7 @@ h1 {
 .btn-info-chang {
   background-color: #af1026;
   color: white;
-  border-color: #af1026;  
+  border-color: #af1026;
   border-radius: 50%;
   border-style: solid;
   border: 3px;
@@ -159,4 +159,9 @@ h1 {
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.fb_dialog_content iframe {
+  bottom: 19px !important;
+  right: 104px !important;
 }

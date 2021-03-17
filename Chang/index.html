@@ -54,14 +54,14 @@
   </a> -->
 
   <div id="position-btn">
-    <button type="button" class="btn btn-info-chang" onclick="test()">
+    <button type="button" class="btn btn-info-chang" onclick="socialCard()">
       <i class="fa fa-question"></i>
     </button>
   </div>
 
   <div class="card" id="position-card" style="width: 18rem;">
     <div class="card-body">
-      <button type="button" class="close" onclick="test()" aria-label="Close">
+      <button type="button" class="close" onclick="socialCard()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
       </button>
       <h5 class="card-title chang-red-text text-center">Redes sociales</h5>
@@ -78,7 +78,9 @@
 
       <p class="card-text text-center">Para mas información</p>
       <!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
+      <div class="d-flex justify-content-center">
+        <div id="fb-root"></div>
+      </div>
       <!-- Your Chat Plugin code -->
       <div class="fb-customerchat" attribution="setup_tool" page_id="464785206906524" theme_color="#0A7CFF"
         logged_in_greeting="Hola, estimados , que puedo servirles?"
@@ -114,7 +116,7 @@
     fjs.parentNode.insertBefore(js, fjs);
   })(document, "script", "facebook-jssdk");
 
-  function test() {
+  function socialCard() {
     var cardInfo = document.getElementById("position-card");
     var btnInfo = document.getElementById("position-btn");
 
