@@ -84,53 +84,52 @@
     </div>
   </div>
 
-</body>
-<script>
-  window.addEventListener("load", (event) => {
-    var image = document.querySelector("img.menu");
-    var isLoaded = image.complete && image.naturalHeight !== 0;
-    if (isLoaded) {
-      document.getElementById("loading").style.display = "none";
-    }
-  });
-
-</script>
-
-<script>
-
-  window.fbAsyncInit = function () {
-    FB.init({
-      xfbml: true,
-      version: "v10.0",
+  <script>
+    window.addEventListener("load", (event) => {
+      var image = document.querySelector("img.menu");
+      var isLoaded = image.complete && image.naturalHeight !== 0;
+      if (isLoaded) {
+        document.getElementById("loading").style.display = "none";
+      }
     });
-  };
 
-  (function (d, s, id) {
-    var js,
-      fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s);
-    js.id = id;
-    js.src = "https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js";
-    fjs.parentNode.insertBefore(js, fjs);
-  })(document, "script", "facebook-jssdk");
+  </script>
 
-</script>
+  <script>
 
-<script>
-  function socialCard() {
-    var cardInfo = document.getElementById("position-card");
-    var btnInfo = document.getElementById("position-btn");
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: "v10.0",
+      });
+    };
 
-    if (cardInfo.style.display === "block") {
-      cardInfo.style.display = "none";
-      btnInfo.style.display = "block";
-    } else {
-      cardInfo.style.display = "block";
-      btnInfo.style.display = "none";
+    (function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    })(document, "script", "facebook-jssdk");
+
+  </script>
+
+  <script>
+    function socialCard() {
+      var cardInfo = document.getElementById("position-card");
+      var btnInfo = document.getElementById("position-btn");
+
+      if (cardInfo.style.display === "block") {
+        cardInfo.style.display = "none";
+        btnInfo.style.display = "block";
+      } else {
+        cardInfo.style.display = "block";
+        btnInfo.style.display = "none";
+      }
+
     }
-
-  }
-</script>
-
+  </script>
+</body>
 </html>
