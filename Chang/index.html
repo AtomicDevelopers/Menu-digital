@@ -48,11 +48,6 @@
     </div>
   </div>
 
-  <!-- <a href="https://api.whatsapp.com/send?phone=50578781618&text=Hola,%20deseo%20mayor%20informaci%C3%B3n" class="float"
-    target="_blank">
-    <i class="fa fa-whatsapp my-float"></i>
-  </a> -->
-
   <div id="position-btn">
     <button type="button" class="btn btn-info-chang" onclick="socialCard()">
       <i class="fa fa-question"></i>
@@ -76,7 +71,7 @@
 
       <hr>
 
-      <p class="card-text text-center">Para mas información</p>
+      <p class="card-text text-center mb-messenger-btn">Para mas información</p>
       <!-- Load Facebook SDK for JavaScript -->
       <div class="d-flex justify-content-center">
         <div id="fb-root"></div>
@@ -99,6 +94,10 @@
     }
   });
 
+</script>
+
+<script>
+
   window.fbAsyncInit = function () {
     FB.init({
       xfbml: true,
@@ -116,6 +115,9 @@
     fjs.parentNode.insertBefore(js, fjs);
   })(document, "script", "facebook-jssdk");
 
+</script>
+
+<script>
   function socialCard() {
     var cardInfo = document.getElementById("position-card");
     var btnInfo = document.getElementById("position-btn");

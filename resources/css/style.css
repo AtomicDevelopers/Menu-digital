@@ -161,7 +161,11 @@ h1 {
   opacity: 0;
 }
 
+.mb-messenger-btn {
+  margin-bottom: 5rem !important;
+}
+
 .fb_dialog_content iframe {
-  bottom: 19px !important;
+  bottom: 34px ​!important;
   right: 104px !important;
 }
