@@ -53,6 +53,10 @@ h1 {
   border-radius: 10px;
 }
 
+a:hover {
+  color: #fff;
+}
+
 #loading {
   width: 100%;
   height: 100%;
@@ -84,10 +88,88 @@ h1 {
   margin-top: 16px;
 }
 
-.bg a:hover {
-  color: #fff;
+.btn-rounded {
+  display: block;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: #25d366;
+  border: #25d366;
+  text-align: center;
+  color: white;
+  font-size: 30px;
 }
 
 .chang-red-text {
   color: #af1026;
+}
+
+.btn-info-chang {
+  background-color: #af1026;
+  color: white;
+  border-color: #af1026;
+  border-radius: 50%;
+  border-style: solid;
+  border: 3px;
+  width: 60px;
+  height: 60px;
+  font-size: 25px;
+}
+
+#position-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+#position-card {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+#position-btn button:hover {
+  color: #fff;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-info-chang::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.mb-messenger-btn {
+  margin-bottom: 5rem !important;
+}
+
+.fb_dialog_content iframe {
+  bottom: 34px !important;
+  right: 104px !important;
 }
