@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <div class="container">
+  <div class="container mb-5">
     <div class="row justify-content-center">
       <div class="col-lg-12 p-0">
         <img src="img/Menu Completo.png" class="img-fluid mx-auto d-block menu" alt="Menu digital restaurante chang" />
@@ -54,7 +54,7 @@
     </button>
   </div>
 
-  <div class="card" id="position-card" style="width: 18rem;">
+  <div class="card width-card-social-media" id="position-card">
     <div class="card-body">
       <button type="button" class="close" onclick="socialCard()" aria-label="Close">
         <span aria-hidden="true">&times;</span>
@@ -72,31 +72,18 @@
       <hr>
 
       <p class="card-text text-center mb-messenger-btn">Para mas información</p>
-      <!-- Load Facebook SDK for JavaScript -->
       <div class="d-flex justify-content-center">
         <div id="fb-root"></div>
       </div>
-      <!-- Your Chat Plugin code -->
       <div class="fb-customerchat" attribution="setup_tool" page_id="464785206906524" theme_color="#0A7CFF"
-        logged_in_greeting="Hola, estimados , que puedo servirles?"
-        logged_out_greeting="Hola, estimados , que puedo servirles?">
+        logged_in_greeting="Hola estimados, ¿En que puedo servirles?"
+        logged_out_greeting="Hola estimados, ¿En que puedo servirles?">
       </div>
     </div>
   </div>
 
+  <script src="../resources/js/loader.js"></script>
   <script>
-    window.addEventListener("load", (event) => {
-      var image = document.querySelector("img.menu");
-      var isLoaded = image.complete && image.naturalHeight !== 0;
-      if (isLoaded) {
-        document.getElementById("loading").style.display = "none";
-      }
-    });
-
-  </script>
-
-  <script>
-
     window.fbAsyncInit = function () {
       FB.init({
         xfbml: true,
@@ -113,23 +100,8 @@
       js.src = "https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js";
       fjs.parentNode.insertBefore(js, fjs);
     })(document, "script", "facebook-jssdk");
-
   </script>
-
-  <script>
-    function socialCard() {
-      var cardInfo = document.getElementById("position-card");
-      var btnInfo = document.getElementById("position-btn");
-
-      if (cardInfo.style.display === "block") {
-        cardInfo.style.display = "none";
-        btnInfo.style.display = "block";
-      } else {
-        cardInfo.style.display = "block";
-        btnInfo.style.display = "none";
-      }
-
-    }
-  </script>
+  <script src="../resources/js/socialCard.js"></script>
 </body>
+
 </html>
