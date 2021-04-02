@@ -188,3 +188,7 @@ a:hover {
   bottom: 34px !important;
   right: 104px !important;
 }
+
+.width-card-social-media {
+  width: 18rem;
+}
